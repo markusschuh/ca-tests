@@ -1,0 +1,24 @@
+$ certutil -user -store My 533F47CAC185F3E180C5401F69265808E886BBA1
+
+My "Personal"
+================ Certificate 13 ================
+Serial Number: 6272538b660bc1be4cb3eacb0e2f9968
+Issuer: CN=Example Corp Lab CA
+ NotBefore: 01.06.2023 04:17
+ NotAfter: 01.06.2028 04:27
+Subject: CN=Example Corp Lab CA
+Signature matches Public Key
+Root Certificate: Subject matches Issuer
+Cert Hash(sha1): 533f47cac185f3e180c5401f69265808e886bba1
+  Key Container = te-b9b63943-7364-4ec9-ba88-6d618e5f3a36
+  Unique container name: 9d7e826d0b5b24beab06b32c03a5051f_9a7cd49b-5ca8-4252-b0d0-5f0d40651ccb
+  Provider = Microsoft Software Key Storage Provider
+Encryption test passed
+CertUtil: -store command completed successfully.
+
+$ certutil -delkey -user -csp KSP te-b9b63943-7364-4ec9-ba88-6d618e5f3a36
+
+  te-b9b63943-7364-4ec9-ba88-6d618e5f3a36
+CertUtil: -delkey command completed successfully.
+
+$ remove-item Cert:\CurrentUser\my\533F47CAC185F3E180C5401F69265808E886BBA1
