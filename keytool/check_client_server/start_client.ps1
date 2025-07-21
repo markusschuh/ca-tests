@@ -1,0 +1,1 @@
+java.exe --% -Djavax.net.ssl.keyStore=client.keystore -Djavax.net.ssl.keyStorePassword=password -Djavax.net.ssl.trustStore=client.truststore -Djavax.net.ssl.trustStorePassword=password .\SSLSocketClient.java localhost 8443
