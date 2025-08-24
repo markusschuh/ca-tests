@@ -1,19 +1,18 @@
 #!/usr/bin/env bash
-CANAME=Example_RootCA
+CANAME=ExampleOrg_RootCA
 
 cd $CANAME || exit
 
 MYCERT=$1
 
 args_sign_endpoint=(
+  -in     "$MYCERT.csr"
   -req
+  -days   730
+  -copy_extensions copyall
   -CA     "$CANAME.crt"
   -CAkey  "$CANAME.key"
-  -in     "$MYCERT.csr"
-  -out    "$MYCERT.crt"
   -CAcreateserial
-  -days   730
-  -sha256
-  -copy_extensions copyall
+  -out    "$MYCERT.crt"
 )
 openssl x509 "${args_sign_endpoint[@]}"
