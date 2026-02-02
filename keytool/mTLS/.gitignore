@@ -1,0 +1,8 @@
+# ignore cryptographic material
+*.cer
+*.pem
+*.key
+*.pfx
+*.pkcs12
+*.keystore
+*.truststore

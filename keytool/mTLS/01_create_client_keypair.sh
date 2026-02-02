@@ -7,5 +7,5 @@ keytool -genkeypair \
   -keystore jmxclient.keystore -storepass "$jmxclient_pw" \
   -alias jmxclient \
   -keyalg RSA -keysize 2048 \
-  -dname "$basedn,cn=jmxclient" \
+  -dname "$base_dn,cn=jmxclient" \
   -validity 180
